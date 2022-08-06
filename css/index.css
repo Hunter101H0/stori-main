@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+:root {
+    --main-color: #EAB600;
+    --main-color-dark: #eab700e7;
+    --main-color-alt: #2ABFFF;
+    --main-background-color: #2B2B2B;
+    --main-background-color-alt: #1C1C1C;
+    --main-background-color-alt2: #151515;
+    --main-padding-bottom: 100px;
+    --main-padding-top: 100px;
+    --main-transition: 0.3s;
+}
+
+/*  Start Global Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: 'Jua', sans-serif; */
+    /* font-family: 'Roboto Slab', serif; */
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-background-color);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*  End Global Rules */
+
+/* Stat header */
+header {
+    background-color: var(--main-background-color);
+    padding: 10px 0;
+    position: relative;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header .uoser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    max-width: 355px;
+    min-width: 270px;
+}
+
+header .uoser a {
+    font-weight: bold;
+    color: var(--main-color);
+    font-family: 'Merienda One', cursive;
+    font-size: 35px;
+    margin: 5px 10px 5px 0;
+}
+
+header .Account {
+    font-size: 10px;
+    color: white;
+}
+header .Account h3{
+    color: rgba(255, 255, 255, 0.73);
+    font-size: 13px;
+}
+header .Account h2 {
+    color: var(--main-color);
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+header .Account h2 i{
+    font-size: 17px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+header .Account h2 span {
+    color: #ffffff;
+}
+header .icon,
+a {
+    display: flex;
+    color: #ffffff;
+    gap: 36px;
+    font-size: 20px;
+    align-items: center;
+}
+header .icon .saerh {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+header .icon .saerh input {
+    border: none;
+    height: 26px;
+    position: relative;
+    border-radius: 3px 0 0 3px;
+    background-color: #595959;
+    left: 3px;
+    padding: 3px 10px;
+    caret-color: var(--main-color);
+    color: #fff;
+    box-sizing: content-box;
+    transition: var(--main-transition);
+}
+header .icon .saerh input:focus::placeholder{
+    color: #0000;
+}
+header .icon .saerh input:focus{
+    outline: none;
+    border: 1px solid var(--main-color);
+    border-right: 0;
+}
+header .icon .saerh input::placeholder{
+    transition: 0.3s;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+header .icon .saerh a{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+    z-index: 2;
+}
+header .icon .saerh a:hover{
+    background-color: var(--main-color-dark);
+}
+header .icon > a i{
+    font-size: 25px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+header .icon > a i:hover{
+    color: var(--main-color);
+}
+header .icon .login i{
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+header .icon .login:hover i{
+    transform: translateX(5px) scale(0.9);
+    -webkit-transform: translateX(5px) scale(0.9);
+    -moz-transform: translateX(5px) scale(0.9);
+    -ms-transform: translateX(5px) scale(0.9);
+    -o-transform: translateX(5px) scale(0.9);
+}
+header .icon .menu-icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-end;
+    cursor: pointer;
+    display: none;
+    z-index: 11;
+}
+header .icon .menu-icon span{
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    transition: var(--main-transition);
+    border-radius: 5px;
+}
+header .icon .menu-icon span:nth-child(1){
+    animation: forwards linear 0.3s;
+    -webkit-animation: forwards linear 0.3s;
+}
+header .icon .menu-icon span:nth-child(3){
+    animation: forwards linear 0.3s;
+    -webkit-animation: forwards linear 0.3s;
+}
+header .icon .menu-icon:hover span{
+    background-color: var(--main-color);
+}
+/* -------------------- */
+header .menu .Account {
+    margin-bottom: 50px;
+}
+header .menu .saerh{
+    margin-bottom: 40px;
+}
+header .menu .login{
+    all: unset;
+    margin-bottom: 20px;
+    position: relative;
+    color: var(--main-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+header .menu .login i{
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+header .menu .login:hover i{
+    transform: translateX(10px) scale(0.9);
+    -webkit-transform: translateX(10px) scale(0.9);
+    -moz-transform: translateX(10px) scale(0.9);
+    -ms-transform: translateX(10px) scale(0.9);
+    -o-transform: translateX(10px) scale(0.9);
+}
+header .menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--main-background-color-alt2);
+    padding: 20px;
+    z-index: 10;
+    display: none;
+}
+header .menu .saerh {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+header .menu .saerh input {
+    border: none;
+    height: 26px;
+    position: relative;
+    border-radius: 0 5px 5px 0;
+    background-color: #595959;
+    left: -3px;
+    padding: 3px 10px;
+    caret-color: var(--main-color);
+    color: #fff;
+    box-sizing: content-box;
+    transition: var(--main-transition);
+    width: 80%;
+}
+header .menu .saerh input:focus::placeholder{
+    color: #0000;
+}
+header .menu .saerh input:focus{
+    outline: none;
+    border: 1px solid var(--main-color);
+    border-left: 0;
+}
+header .menu .saerh input::placeholder{
+    transition: 0.3s;
+    -webkit-transition: var(--main-transition);
+
+}
+header .menu .saerh a{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+    z-index: 2;
+}
+header .menu .saerh a:hover{
+    background-color: var(--main-color-dark);
+}
+header .menu > a i{
+    font-size: 25px;
+}
+header .menu ul.links{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #fff;
+}
+header .menu ul.links li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .menu ul.links li i{
+    color: var(--main-color);
+    font-size: 23px;
+}
+header .menu ul.links li h2{
+    font-size: 23px;
+}
+header .icon > .login{
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--main-color);
+}
+@keyframes close-top {
+    50%{
+        transform: translateY(8px);
+}
+    100%{
+        transform: translateY(8px) rotate(45deg);
+}
+}
+@keyframes close-bottom {
+    50%{
+        transform: translateY(-8px);
+}
+    100%{
+        transform: translateY(-8px) rotate(-45deg);
+}
+}
+@keyframes close {
+    to{
+        transform: translateY(0) rotate(0);
+        -webkit-transform: translateY(0) rotate(0);
+        -moz-transform: translateY(0) rotate(0);
+        -ms-transform: translateY(0) rotate(0);
+        -o-transform: translateY(0) rotate(0);
+}
+}
+@media (max-width: 992px) {
+    header .icon .menu-icon{
+        display: flex;
+
+    }
+    header .icon .saerh,
+    header .icon > a,
+    .products,
+    header .icon .login{
+        display: none;
+    }
+    header .icon{
+        gap: 0;
+    }
+}
+@media (min-width: 991px) {
+    header .menu{
+        display: none !important;
+    }
+}
+@media (max-width: 550px) {
+    header .uoser .Account{
+        display: none;
+    }
+    header .uoser{
+        width: fit-content;
+        min-width: fit-content;
+    }
+}
+/* End header */
+
+/* Start products */
+.products {
+    background-color: var(--main-background-color-alt);
+    padding: 10px 0;
+}
+
+.products .nav ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.products .nav li a {
+    color: white;
+    transition: ease var(--main-transition);
+    font-size: 18px;
+}
+
+.products .nav li a:hover {
+    color: var(--main-color);
+}
+/* End products */
