@@ -92,7 +92,7 @@ function prevSlide() {
 }
 
 function theChecker() {
-    slideNumberElement.textContent = 'Slide #' + (currentSlide) + ' of ' + (slidesCount);
+    slideNumberElement.textContent = 'Image ' + (currentSlide);
 
     removeAllActive();
 

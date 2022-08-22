@@ -488,7 +488,7 @@ header .icon>.login {
     transition: opacity 1s;
     z-index: 1;
     border-radius: 5px;
-    max-height: 550px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -513,7 +513,10 @@ header .icon>.login {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    position: relative;
+    height: 550px;
+    z-index: 2;
+    height: 100%;
 }
 
 .slider-controls .prev,
@@ -523,19 +526,47 @@ header .icon>.login {
     text-align: center;
     cursor: pointer;
     border-radius: 4px;
-    padding: 5px;
+    padding: 10px;
+    background-color: #40403fe5;
     user-select: none;
-    width: 3%;
+}
+
+.slider-controls .arrows{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 50%;
+    font-size: 20px;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 
 .slider-controls .prev.disabled,
 .slider-controls .next.disabled {
-    background-color: #40403f49;
+    background-color: #40403f8e;
     cursor: no-drop;
 }
 
 .slider-controls .indicators {
-    width: 60%;
+    position: absolute;
+    padding: 10px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    bottom: 0;
+    /*width: 100%;*/
+    background-color: rgba(0,0,0,0.3);
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 
 .slider-controls .indicators ul {
@@ -544,21 +575,30 @@ header .icon>.login {
     text-align: center;
 }
 
-
 .slider-controls .indicators ul li {
     display: inline-block;
     background-color: #f6f6f640;
-    color: #5e5e5e;
+    color: #1C1C1C;
     font-weight: bold;
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    margin: 0 2px;
+    margin: 0 5px;
     line-height: 28px;
     cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
-.slider-controls .indicators ul li.active {
+.slider-controls .indicators ul li.active,
+.slider-controls .indicators ul li:hover {
     background-color: #eab600;
     color: rgb(0, 0, 0);
+}
+
+.slider-controls .indicators ul li:hover{
+    background-color: #eab700be;
 }
